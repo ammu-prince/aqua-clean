@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aqua Clean Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00796b;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    .option {
+      margin-left: 20px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0277bd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aqua Clean Awareness Quiz</h1>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What is the most effective method for purifying water at home?</p>
+      <label class="option"><input type="radio" name="q1" value="A"> Boiling</label><br>
+      <label class="option"><input type="radio" name="q1" value="B"> Storing in plastic bottles</label>
+    </div>
+
+    <div class="question">
+      <p>2. What is the main cause of water pollution?</p>
+      <label class="option"><input type="radio" name="q2" value="A"> Singing in rivers</label><br>
+      <label class="option"><input type="radio" name="q2" value="B"> Industrial waste</label>
+    </div>
+
+    <div class="question">
+      <p>3. Which of the following organizations works for water safety globally?</p>
+      <label class="option"><input type="radio" name="q3" value="A"> Netflix</label><br>
+      <label class="option"><input type="radio" name="q3" value="B"> WHO</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit</button>
+  </form>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+
+      const answers = {
+        q1: "A",
+        q2: "B",
+        q3: "B"
+      };
+
+      const form = document.forms["quizForm"];
+
+      for (let key in answers) {
+        const selected = form[key].value;
+        if (selected === answers[key]) {
+          score++;
+        }
+      }
+
+      `alert(You scored ${score} out of 3!\n\n${score === 3 ? "Excellent work! ✅" : "Keep learning! 🌱"})`;
+    }
+  </script>
+
+</body>
+</html>

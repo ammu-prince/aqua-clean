@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aqua Clean</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #0288d1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: #00796b;
+    }
+
+    .card p {
+      margin: 10px 0;
+    }
+
+    .card button {
+      background: #0288d1;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #0277bd;
+    }
+
+    footer {
+      background: #0288d1;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .quiz-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .quiz-section button {
+      background: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .quiz-section button:hover {
+      background: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Aqua Clean</h1>
+  <p>Interactive Awareness to Ensure Safe Water for All</p>
+</header>
+
+<section>
+  <h2 style="text-align:center;">Awareness Programs</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Water Filtration Demos</h3>
+      <p>Live demonstrations on how to purify water using household methods.</p>
+      <button onclick="redirectTo('https://www.youtube.com/results?search_query=water+filtration+demos')">Learn More</button>
+    </div>
+    <div class="card">
+      <h3>School Drives</h3>
+      <p>Poster-making competitions and sessions in schools to promote water safety.</p>
+      <button onclick="redirectTo('https://www.unicef.org/education')">Visit UNICEF</button>
+    </div>
+    <div class="card">
+      <h3>Video Campaigns</h3>
+      <p>Watch short films and animations in public places spreading awareness.</p>
+      <button onclick="redirectTo('https://www.youtube.com/results?search_query=clean+water+campaign')">Watch Videos</button>
+    </div>
+    <div class="card">
+      <h3>Infographics</h3>
+      <p>Share posters and tips on WhatsApp or Telegram about clean water habits.</p>
+      <button onclick="redirectTo('https://www.who.int/news-room/fact-sheets/detail/drinking-water')">Read WHO Facts</button>
+    </div>
+    <div class="card">
+      <h3>Community Clean-Up</h3>
+      <p>Join local groups cleaning nearby riversides and polluted water bodies.</p>
+      <button onclick="redirectTo('https://jalshakti-ddws.gov.in/')">Join a Campaign</button>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-section">
+  <h2>🧠 Test Your Knowledge</h2>
+  <p>Click below to take a short awareness quiz!</p>
+  <button onclick="redirectTo('quiz.html')">Take the Quiz</button>
+</section>
+
+<footer>
+  <p>&copy; 2025 Aqua Clean Project | All rights reserved</p>
+</footer>
+
+<script>
+  function redirectTo(url) {
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
